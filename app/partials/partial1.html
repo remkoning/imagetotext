@@ -1,0 +1,41 @@
+{{done}}
+
+<div ng-repeat="page in pages">
+    <center><h2><b>IAS PAGE:</b> {{page}}</h2></center>
+</div>
+
+<br><br>
+
+<div class="container">
+    <form ng-submit="submit()">
+        <div ng-repeat="block in blocks">
+            <div class="row">
+                <div class="col-md-6" style="text-align: right;">
+                    <img src="http://ias-blocks.s3.amazonaws.com/{{block.file}}.jpg" border="1" style="width: 100%;">
+                </div>
+                <div class="col-md-6">
+                    <textarea type="text" ng-model="block.text" class="form-control" rows="6" style="width: 100%"></textarea>
+                </div>
+            </div>
+            <br><br>
+        </div>
+        <center>
+            <input class="btn btn-success btn-lg" type="submit" id="submit" value="Submit" />
+        </center>
+    </form>
+</div>
+<!-- <form name="myForm" ng-controller="Ctrl"> -->
+<!-- {{item in items.70s80s.x0 | limitTo:20}} -->
+<!-- <form ng-submit="submit()">
+    <div ng-repeat="item in items.70s80s.x0 | limitTo: 5">
+            <hr>
+            <img src="http://ias-blocks.s3.amazonaws.com/{{item.file}}.jpg" border="1" style="border-color: red;">
+            <input type="text" ng-model="item.text" ng-stop-bind></input>
+            <br>
+    </div>
+
+</form>
+ -->
+<!-- <input type="text" name="{{item}}" ng-repeat="item in items.70s80s.x0 | limitTo:20"> -->
+<br>
+
